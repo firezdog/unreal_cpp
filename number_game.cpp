@@ -3,6 +3,8 @@
 
 using namespace std; 
 
+static int rounds = 0;
+
 int* getNumbers(int difficulty) 
 {
   srand((unsigned)time(0));
@@ -74,13 +76,18 @@ void playGameAtDifficulty(int difficulty) {
   printPuzzle(p);
   int* guess = getAnswer();
   bool isCorrect = checkAnswers(p, guess);
-  if (isCorrect) cout << "You got it!" << endl;
+  if (isCorrect) {
+    cout << "You got it!" << endl;
+    rounds++;
+  }
   else cout << "Try again, bucko..." << endl;
 }
 
 int main(int argc, char **argv)
 {
   int difficulty = std::stoi(argv[1]);
-  playGameAtDifficulty(difficulty);
+  while (true) {
+    playGameAtDifficulty(difficulty + rounds);
+  }
   return 0;
 }
