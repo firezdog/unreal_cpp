@@ -88,6 +88,8 @@ int main(int argc, char **argv)
   int difficulty = std::stoi(argv[1]);
   while (true) {
     playGameAtDifficulty(difficulty + rounds);
+    std::cin.clear();
+    std::cin.ignore();
   }
   return 0;
 }
