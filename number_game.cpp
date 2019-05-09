@@ -1,7 +1,10 @@
 #include <iostream>
 #include <cstdlib>
 
-using namespace std; 
+using std::cout;
+using std::cin;
+using std::endl;
+using std::stoi;
 
 static int rounds = 0;
 
