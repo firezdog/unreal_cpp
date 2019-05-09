@@ -17,7 +17,7 @@ int* getNumbers(int difficulty)
 
 void writeWelcome(int difficulty) 
 {
-  std::cout 
+  cout 
     << "Welcome to the number game." << endl 
     << "You have selected difficulty level " 
     << difficulty << endl;
@@ -46,7 +46,7 @@ puzzle getPuzzle(int difficulty) {
 
 void printPuzzle(puzzle p) 
 {
-  std::cout 
+  cout 
     << "Find three integers (>= 0) whose product is " 
     << p.product 
     << " and whose sum is " 
@@ -56,9 +56,9 @@ void printPuzzle(puzzle p)
 int* getAnswer() 
 {
   static int answers[3];
-  std::cout 
+  cout 
     << "Enter the three numbers below, separated by spaces." << endl;
-  std::cin 
+  cin 
     >> answers[0] 
     >> answers[1] 
     >> answers[2];
@@ -85,11 +85,11 @@ void playGameAtDifficulty(int difficulty) {
 
 int main(int argc, char **argv)
 {
-  int difficulty = std::stoi(argv[1]);
+  int difficulty = stoi(argv[1]);
   while (true) {
     playGameAtDifficulty(difficulty + rounds);
-    std::cin.clear();
-    std::cin.ignore();
+    cin.clear();
+    cin.ignore();
   }
   return 0;
 }
