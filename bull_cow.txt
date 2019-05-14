@@ -1,0 +1,13 @@
+                 _   _    (:)(:)     
+                ((___))    |  |      _____
+    ____________( o o )    |  |     ( o o )____________
+   /     ::::    \   /     |  |      \   /    ::::     \
+  / |    ::::    (' ')     |  |      (' ')    ::::    | \
+_/_/| |  :::: | |_(U)|____\|/\|/____ |(U)_| | ::::  | |\_\_
+    | || |~~~~| |  | |               | |  | |~~~~| || |
+   /...\..\  /...\/...\             /...\/...\  /../...\
+
+                    WELCOME TO BULL COW!
+
+INSTRUCTIONS: An isogram is a word with no repeating letters.
+Guess the isogram to win the game.
