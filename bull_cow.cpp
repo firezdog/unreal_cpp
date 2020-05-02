@@ -4,13 +4,11 @@
   if she guesses the right letter in the wrong place, she gets a "cow".
   She has 10 tries to guess the correct word (winning and losing conditions).
 */
-
+using namespace std;
 #include <iostream>
 #include <fstream>
 #include <map>
 #include <string>
-
-using namespace std;
 
 string getFileContents(ifstream &file)
 {
