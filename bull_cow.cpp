@@ -37,31 +37,58 @@ void printIntro()
 	cout << intro << endl;
 }
 
+typedef struct {
+	map<char, bool> wordMap;
+	string word;
+} wordInfo;
+
+string chooseWord()
+{
+	return "pork";
+}
+
+map<char, bool> generateWordMap(string word)
+{
+	map<char, bool> wordMap;
+	for (int i = 0; i < word.length(); i++) 
+	{
+		wordMap[word.at(i)] = true;
+	}
+	return wordMap;
+}
+
+wordInfo getWordInfo()
+{
+	wordInfo info;
+	info.word = chooseWord();
+	info.wordMap = generateWordMap(info.word);
+	return info;
+}
+
+void askForGuess(wordInfo info)
+{
+	cout << "Hint: The word is " << info.word.length() << " letters.\n";
+	string guess;
+	cin >> guess;
+	cout << "You guessed \"" << guess << "\".\n";
+	for (int i = 0; i < guess.length(); i++)
+	{
+		cout << info.wordMap[guess.at(i)] << "\n";
+	}
+	if (guess == info.word)
+	{
+		cout << "Congratulations -- you are correct!\n";
+		return;
+	}
+	else cout << "Sorry, try again...\n";
+}
+
 void gameLoop()
 {
 	while (true)
 	{
-		string word = "pork";
-		map<char, bool> wordMap;
-		for (int i = 0; i < word.length(); i++) 
-		{
-			wordMap[word.at(i)] = true;
-		}
-		cout << "Hint: The word is 4 letters.\n";
-		string guess;
-		cin >> guess;
-		cout << "You guessed \"" << guess << "\".\n";
-		for (int i = 0; i < guess.length(); i++)
-		{
-			cout << wordMap[guess.at(i)] << "\n";
-		}
-		if (guess == "pork")
-		{
-			cout << "Congratulations -- you are correct!\n";
-			return;
-		}
-		else
-			cout << "Sorry, try again...\n";
+		wordInfo info = getWordInfo();
+		askForGuess(info);
 	}
 }
 
