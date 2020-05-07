@@ -4,15 +4,15 @@
 void UBullCowCartridge::BeginPlay() // When the game starts
 {
     Super::BeginPlay();
-    PrintLine("Welcome to the Bull-Cow game.");
-    PrintLine("An isogram is a word with no repeating letters.");
-    PrintLine("You will have ten chances to guess an isogram.");
-    PrintLine("Type you guess, then press enter.");
-    PrintLine("If you are wrong, you will get a hint!");
-    PrintLine("Press enter to start.");
+    PrintLine(TEXT("Welcome to the Bull-Cow game."));
+    PrintLine(TEXT("An isogram is a word with no repeating letters."));
+    PrintLine(TEXT("You will have ten chances to guess an isogram."));
+    PrintLine(TEXT("Type you guess, then press enter."));
+    PrintLine(TEXT("If you are wrong, you will get a hint!"));
+    PrintLine(TEXT("Press tab to start."));
 }
 
 void UBullCowCartridge::OnInput(const FString& Input) // When the player hits enter
 {
-    ClearScreen();
+    PrintLine(Input);
 }
